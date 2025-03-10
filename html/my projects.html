@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Interactive Portfolio</title>
+    <link
+  rel="stylesheet"
+  href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.6.0/css/all.min.css"
+  
+/>
+<link rel="stylesheet" href="../css/myProjects.css">
+    <style>
+       
+    </style>
+</head>
+<body>
+
+<nav >
+       <div class="nav-pro">
+       <div class="logo">Falmi <span>Abdi</span>
+       
+        
+        </div>
+        <div>
+       <i class="fa-solid fa-bars hamburg" onclick="openMenu()"></i>
+       </div>
+       </div>
+        
+        
+        <div class="links">
+            <a href="home.html">Home</a>
+            <a href="AboutMe.html">About</a>
+            <a href="skill.html">Skill</a>
+            <a href="service.html">Service</a>
+            <a href="my projects.html">Project</a>
+            <a href="contact.html">Contact</a>
+        
+        </div>
+    
+            
+          
+    </nav>
+
+    <div class="dropdown-menu" id="dropdownMenu">
+        <a href="home.html">Home</a>
+        <a href="AboutMe.html">About</a>
+        <a href="skill.html">Skill</a>
+        <a href="service.html">Service</a>
+        <a href="my projects.html">Project</a>
+        <a href="contact.html">Contact</a>
+          
+        <i class="fa-solid fa-times cancel" onclick="closeMenu()"></i>
+    </div>
+
+<section class="my-projects" id="projects">
+    <div class="projects-content">
+        <div class="row" onclick="openModal('Apple Project', 'apple.com\'s homepage using HTML & CSS', '../images/download (1).jpeg')">
+            <img src="../images/download (1).jpeg" alt="Apple Project">
+            <div class="layer">
+                <h5>Stopwatch</h5>
+                <p>Stopwatch by Power of JavaScript</p>
+            </div>
+            <a href="https://github.com" target="_blank">View on GitHub</a>
+        </div>
+
+        <div class="row" onclick="openModal('Simple Calculator', 'Check out the best design updates for top web development companies.', '../images/cal.jpeg')">
+            <img src="../images/cal.jpeg" alt="Simple Calculator">
+            <div class="layer">
+                <h5>Simple Calculator</h5>
+                <p>Check out the best design updates for top web development companies.</p>
+            </div>
+            <a href="https://github.com" target="_blank">View on GitHub</a>
+        </div>
+
+        <div class="row" onclick="openModal('Voting System', 'Voting system during the election of student president', '../images/download (2).jpeg')">
+            <img src="../images/download (2).jpeg" alt="Voting System">
+            <div class="layer">
+                <h5>Voting System</h5>
+                <p>Voting system during the election of student president</p>
+            </div>
+            <a href="https://github.com" target="_blank">View on GitHub</a>
+        </div>
+
+        <div class="row" onclick="openModal('Portfolio Project', 'I have completed a responsive portfolio.', '../images/Screenshot 2025-03-07 043904.png')">
+            <img src="../images/Screenshot 2025-03-07 043904.png" alt="Portfolio Project">
+            <div class="layer">
+                <h5>Portfolio Project</h5>
+                <p>I have completed a responsive portfolio.</p>
+            </div>
+            <a href="https://github.com" target="_blank">View on GitHub</a>
+        </div>
+
+        <div class="row" onclick="openModal('Snake Game', 'It will be deployed soon.', '../images/2nd tic tac.jpeg')">
+            <img src="../images/2nd tic tac.jpeg" alt="Snake Game">
+            <div class="layer">
+                <h5>Tic Tac Game</h5>
+                <p>It will be deployed soon.</p>
+            </div>
+            <a href="https://github.com" target="_blank">View on GitHub</a>
+        </div>
+
+        <div class="row" onclick="openModal('Ancestor of Oromo Nation', 'It will be deployed soon.', '../images/oro.jpeg')" ondblclick="copyImage('oro.jpeg')">
+            <img src="../images/oro.jpeg" alt="Ancestor of Oromo Nation">
+            <div class="layer">
+                <h5>Ancestor of Oromo Nation</h5>
+                <p>It will be deployed soon.</p>
+            </div>
+            <a href="https://github.com" target="_blank">View on GitHub</a>
+        </div>
+    </div>
+</section>
+
+<!-- Modal for Project Details -->
+<div id="projectModal" class="modal">
+    <div class="modal-content">
+        <span class="close" onclick="closeModal()">&times;</span>
+        <img id="modalImage" src="" alt="Project Image">
+        <h2 id="modalTitle"></h2>
+        <p id="modalDescription"></p>
+    </div>
+</div>
+<footer class="footer">
+    <div class="footer-content">
+        <p>Developed by <span class="dev-name">Falmi Abdi</span> &copy; 2025</p>
+        <p>Contact: <span class="contact">+251962395284</span> | Jimma University</p>
+        <a href="mailto:falmitesfaye@gmail.com" class="email">falmitesfaye@gmail.com</a>
+    </div>
+    <div class="moving-line"></div>
+</footer>
+
+<script>
+    // Function to Open Modal
+    function openModal(title, description, imageUrl) {
+        document.getElementById("modalTitle").innerText = title;
+        document.getElementById("modalDescription").innerText = description;
+        document.getElementById("modalImage").src = imageUrl;
+        document.getElementById("projectModal").style.display = "flex";
+    }
+
+    // Function to Close Modal
+    function closeModal() {
+        document.getElementById("projectModal").style.display = "none";
+    }
+
+    // Close Modal When Clicking Outside
+    window.onclick = function(event) {
+        let modal = document.getElementById("projectModal");
+        if (event.target === modal) {
+            modal.style.display = "none";
+        }
+    }
+
+    // Copy Image URL to Clipboard
+    function copyImage(imageUrl) {
+        navigator.clipboard.writeText(imageUrl).then(() => {
+            alert('Image URL copied to clipboard!');
+        });
+    }
+ function openMenu(){
+        document.getElementById("dropdownMenu").style.right ="0";
+      }
+      function closeMenu() {
+        document.getElementById("dropdownMenu").style.right = "-106%";
+      }
+    // Functions for Dropdown enu
+    
+</script>
+
+</body>
+</html>

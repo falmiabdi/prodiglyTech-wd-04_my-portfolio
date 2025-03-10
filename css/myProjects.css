@@ -1,0 +1,351 @@
+ /* General Styling */
+        body {
+            font-family: Arial, sans-serif;
+            background: #121212;
+            color: white;
+            margin: 0;
+            padding: 0;
+            text-align: center;
+        }
+
+        /* Navbar */
+         nav {
+        width: 100%;
+        height: 10vh;
+        position: fixed;
+        top: 0;
+        left: 0;
+        background-image: url('../images/198330974-glowing-neon-line-software-web-developer-programming-code-icon-isolated-on-black-background.jpg');
+        background-repeat: no-repeat;
+        background-size: cover;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: 10px 50px;
+        z-index: 1000;
+        transition: 0.5s ease-in-out;
+      }
+.nav-pro{
+  display:flex;
+  gap: space-between;
+  justify-content:right;
+  align-items: center;
+
+}
+
+    .logo {
+      
+        font-size: 24px;
+        font-weight: bold;
+        color: rgb(252, 249, 249);
+        transition: 0.3s ease;
+      }
+
+      .logo span {
+        color: #ffcc00;
+      }
+       .links {
+            display: flex;
+             margin: 55px;
+        }
+       
+      .links a {
+        color: rgb(230, 222, 222);
+        text-decoration: none;
+        margin: 0 15px;
+        font-size: 18px;
+        transition: 0.3s ease-in-out;
+        position: relative;
+      }
+
+      .links a:hover {
+        color: #ffcc00;
+        transform: scale(1.1);
+      }
+
+      .links a::after {
+        content: " ";
+        width: 0;
+        height: 2px;
+        background: #ffcc00;
+        transition: width 0.3s;
+        position: absolute;
+        left: 0;
+        bottom: -5px;
+      }
+      .links a:hover::after {
+        width: 100%;
+      }
+
+      /* Hamburger Menu */
+      .hamburg {
+        font-size: 24px;
+        color: rgb(229, 217, 217);
+        display: none;
+        cursor: pointer;
+        z-index: 1200;
+      }
+
+ .dropdown-menu {
+        display: flex;
+        flex-direction: column;
+        position: fixed;
+        top: 0;
+        right: -100%;
+        width: 250px;
+        height: 100vh;
+        background-image: url('../images/198330974-glowing-neon-line-software-web-developer-programming-code-icon-isolated-on-black-background.jpg');
+        background-repeat: no-repeat;
+        background-size: cover;
+        justify-content: center;
+        align-items: center;
+        transition: right 0.5s ease-in-out;
+        z-index: 999;
+        box-shadow: -5px 0 10px rgba(0, 0, 0, 0.2);
+      }
+
+      .dropdown-menu a {
+        color: rgb(234, 232, 232);
+        text-decoration: none;
+        margin: 15px 0;
+        font-size: 20px;
+        transition: 0.3s;
+      }
+
+      .dropdown-menu a:hover {
+        color: #ffcc00;
+         transform: scale(1.1);
+      }
+
+      .dropdown-menu .cancel {
+        background-color: white;
+        position: absolute;
+        top: 2px;
+        right: 229px;
+        font-size: 24px;
+        color: #000000;
+        cursor: pointer;
+    }
+        /* Section */
+        .my-projects {
+            padding: 50px 20px;
+            margin-top: 60px; /* To account for the fixed navbar */
+        }
+
+        /* Project Grid */
+        .projects-content {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 20px;
+            justify-content: center;
+            padding: 20px;
+        }
+
+        /* Project Card */
+        .row {
+            position: relative;
+            overflow: hidden;
+            border-radius: 10px;
+            cursor: pointer;
+            transition: 0.4s;
+            box-shadow: 0 0 10px rgba(0, 255, 255, 0.2);
+        }
+
+        .row:hover {
+            transform: scale(1.05);
+            box-shadow: 0 0 20px rgba(0, 255, 255, 0.5);
+        }
+
+        /* Image */
+        .row img {
+            width: 100%;
+            height: auto;
+            display: block;
+            transition: 0.3s ease-in-out;
+        }
+
+        /* Overlay Layer */
+        .layer {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 255, 255, 0.2);
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            opacity: 0;
+            transition: 0.4s ease-in-out;
+        }
+
+        .row:hover .layer {
+            opacity: 1;
+        }
+
+        /* Modal Styling */
+        .modal {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.8);
+            justify-content: center;
+            align-items: center;
+        }
+
+        .modal-content {
+            background: #1e1e1e;
+            padding: 20px;
+            border-radius: 10px;
+            text-align: center;
+            width: 80%;
+            max-width: 500px;
+            box-shadow: 0 0 20px cyan;
+            position: relative;
+        }
+
+        .modal-content img {
+            width: 100%;
+            border-radius: 8px;
+        }
+
+        .modal-content h2 {
+            color: cyan;
+            margin-top: 10px;
+        }
+
+        .modal-content p {
+            font-size: 1em;
+            margin-top: 5px;
+        }
+
+        /* Close Button */
+        .close {
+            position: absolute;
+            top: 10px;
+            right: 15px;
+            font-size: 24px;
+            cursor: pointer;
+            color: red;
+        }
+
+        /* Hover link */
+        .row a {
+            position: absolute;
+            top: 10px;
+            right: 10px;
+            color: cyan;
+            text-decoration: none;
+            opacity: 0;
+            transition: opacity 0.4s ease-in-out;
+        }
+
+        .row:hover a {
+            opacity: 1;
+        }
+        .footer {
+    position: relative;
+    background-image: url('../images/198330974-glowing-neon-line-software-web-developer-programming-code-icon-isolated-on-black-background.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    color: white;
+    text-align: center;
+    padding: 10px;
+    font-size: x-small;
+    font-family: Arial, sans-serif;
+    overflow: hidden;
+}
+
+@keyframes moveBendLine {
+    0% {
+        left: -100%;
+        top: 10px;
+    }
+    50% {
+        left: 50%;
+        top: 0px; /* Raise in the middle to create a bending effect */
+    }
+    100% {
+        left: 100%;
+        top: 10px;
+    }
+}
+
+.moving-line {
+    position: absolute;
+    left: -100%;
+    width: 100%;
+    height: 8px;
+    background: linear-gradient(90deg, transparent, #00aaff, #00aaff, transparent);
+    border-radius: 5px;
+    filter: drop-shadow(0 0 10px #00aaff);
+    animation: moveBendLine 3s ease-in-out infinite;
+}
+
+.dev-name {
+    font-weight: bold;
+    color: #ffcc00;
+}
+
+.contact {
+    font-style: italic;
+}
+
+/* Email Styling */
+.email {
+    display: block;
+    font-size: small;
+    color: #ffcc00;
+    margin-top: 5px;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.email:hover {
+    color: #ffd700;
+    text-decoration: underline;
+}
+
+     @media screen and (max-width: 768px) {
+        .links {
+          display: none;
+        }
+
+     .hamburg {
+        display: block;
+        margin-left: 0;
+        position: absolute;
+        top: 14px;
+        right: 116px;
+        z-index: 2000;
+    }
+}
+       .dropdown-menu{
+        z-index: 1002;
+       }
+       
+      .dropdown-menu a {
+        color: rgb(234, 232, 232);
+        text-decoration: none;
+        margin: 15px 0;
+        font-size: 20px;
+        transition: 0.3s;
+      }
+
+      .dropdown-menu a:hover {
+        color: #ffcc00;
+      }
+      .dropdown-menu .cancel {
+        position: absolute;
+        top: 0px;
+        right: 230px;
+        font-size: 24px;
+        background: #f7f6f6;
+        color: rgb(13, 0, 0);
+        cursor: pointer;
+      }
+     }

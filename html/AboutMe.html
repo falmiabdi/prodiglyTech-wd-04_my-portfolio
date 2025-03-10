@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Me - Falmi Tesfaye</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.6.0/css/all.min.css">
+    <link rel="stylesheet" href="../css/aboutMe.css">
+</head>
+<body>
+    <nav>
+        <div class="logo">Falmi <span>Abdi</span></div>
+        <div class="links">
+            <a href="home.html">Home</a>
+            <a href="AboutMe.html">About</a>
+            <a href="skill.html">Skill</a>
+            <a href="service.html">Service</a>
+            <a href="my projects.html">Project</a>
+            <a href="contact.html">Contact</a>
+        </div>
+        <i class="fa-solid fa-bars hamburg" onclick="openMenu()"></i>
+    </nav>
+
+    <div class="dropdown-menu" id="dropdownMenu">
+        <a href="home.html">Home</a>
+        <a href="AboutMe.html">About</a>
+        <a href="skill.html">Skill</a>
+        <a href="service.html">Service</a>
+        <a href="my projects.html">Project</a>
+        <a href="contact.html">Contact</a>
+        <i class="fa-solid fa-times cancel" onclick="closeMenu()"></i>
+    </div>
+
+    <section class="main-content">
+        <div class="about-container">
+            <!-- Image & Floating Stats -->
+            <div class="about-img">
+                <img src="../images/About me .png" alt="About Me">
+                <div class="stats">0+ Years of Experience</div>
+                <div class="stats">10+ Projects Completed</div>
+                <div class="stats">200+ Happy connection</div>
+            </div>
+
+            <!-- Text Content -->
+            <div class="about-text">
+                <h2>About Me</h2>
+                <p>Hello! I'm <b><span>Falmi Tesfaye</span></b>, a passionate software developer specializing in full-stack development. I have expertise in HTML, CSS, JavaScript, PHP, and MySQL. My goal is to build innovative and impactful software solutions that make a difference.</p>
+                <button class="btn" onclick="openOffcanvas()">Read More!</button>
+            </div>
+        </div>
+
+        <!-- Off-Canvas Panel -->
+        <div class="offcanvas" id="offcanvas">
+            <span class="close-btn" onclick="closeOffcanvas()">×</span>
+            <h2>My History</h2>
+            <p>
+                Hello! I'm <b>Falmi Tesfaye</b>, a passionate and dedicated software developer with a strong background in full-stack development. 
+                Currently, I'm a senior student at Jimma Institute of Technology, where I'm honing my skills and deepening my knowledge in software engineering.  
+                <br><b>Frontend Development:</b> Proficient in HTML, CSS, JavaScript.  
+                <br><b>Backend Development:</b> Skilled in languages such as C++, Java, and PHP. I have extensive experience with MySQL for database management.  
+                <br>Throughout my academic and professional journey, I've worked on various projects that have allowed me to apply my skills and learn new technologies. From developing dynamic web applications to designing user interfaces, I strive to deliver exceptional results that meet the needs of users and clients.  
+                <br>I believe in continuous learning and staying updated with the latest trends and technologies in the software development industry. My goal is to create impactful and innovative solutions that make a difference in people's lives.
+            </p>
+        </div>
+    </section>
+<footer class="footer">
+    <div class="footer-content">
+        <p>Developed by <span class="dev-name">Falmi Abdi</span> &copy; 2025</p>
+        <p>Contact: <span class="contact">+251962395284</span> | Jimma University</p>
+        <a href="mailto:falmitesfaye@gmail.com" class="email">falmitesfaye@gmail.com</a>
+    </div>
+    <div class="moving-line"></div>
+</footer>
+
+    <script>
+        function openOffcanvas() {
+            document.getElementById("offcanvas").classList.add("show");
+        }
+
+        function closeOffcanvas() {
+            document.getElementById("offcanvas").classList.remove("show");
+        }
+
+        function openMenu() {
+            document.getElementById("dropdownMenu").style.right = "0";
+        }
+
+        function closeMenu() {
+            document.getElementById("dropdownMenu").style.right = "-100%";
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Interactive Portfolio - Services</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.6.0/css/all.min.css">
+    <link rel="stylesheet" href="../css/sevive.css">
+</head>
+<body>
+
+    <nav>
+        <div class="logo">Falmi <span>Abdi</span></div>
+        <div class="links">
+            <a href="home.html">Home</a>
+            <a href="AboutMe.html">About</a>
+            <a href="skill.html">Skill</a>
+            <a href="service.html">Services</a>
+            <a href="my projects.html">Projects</a>
+            <a href="contact.html">Contact</a>
+        </div>
+        <i class="fa-solid fa-bars hamburg" onclick="openMenu()"></i>
+    </nav>
+
+    <div class="dropdown-menu" id="dropdownMenu">
+        <a href="home.html">Home</a>
+        <a href="AboutMe.html">About</a>
+        <a href="skill.html">Skill</a>
+        <a href="service.html">Services</a>
+        <a href="my projects.html">Projects</a>
+        <a href="contact.html">Contact</a>
+        <i class="fa-solid fa-times cancel" onclick="closeMenu()"></i>
+    </div>
+
+    <section class="services" id="services">
+    <div><h2>My Services</h2>
+    </div>
+        
+        <div class="services-content">
+            <div class="box" id="box0">
+                <div id="s-icons">
+                    <img src="../images/ux.png">
+                </div>
+                <h3>Frontend Development</h3>
+                <p>
+                    Frontend Development
+Our frontend development services ensure that websites and applications are not only visually appealing but also highly interactive and user-friendly. We specialize in crafting responsive designs that adapt seamlessly to different screen sizes, providing a smooth experience across devices. Using modern frameworks like React and bootstrap we enhance performance and interactivity, ensuring a fast and engaging user interface.
+                </p>
+            </div>
+
+            <div class="box" id="box1">
+                <div id="s-icons">
+                    <img src="../images/ui.png" alt="Web Design Icon">
+                </div>
+                <h3>Web Design Development</h3>
+                <p>
+                   I create visually stunning and highly functional websites tailored to your brand and audience. Our approach focuses on intuitive navigation, clean layouts, and optimized performance to enhance user experience. By incorporating UI/UX best practices, animations, and micro-interactions, we make sure that your website stands out and keeps users engaged
+                </p>
+            </div>
+
+            <div class="box" id="box2">
+                <div id="s-icons">
+                    <img src="../images/back-end.png" alt="Backend Icon">
+                </div>
+                <h3>Backend Development</h3>
+                <p>
+                    Our backend development services focus on building secure, scalable, and efficient server-side applications. We develop robust APIs, manage databases efficiently, and ensure smooth data handling for high-performance applications. With expertise in technologies like  PHP  and database management systems such as MySQL and MongoDB, we create powerful backend systems that drive seamless functionality for your website or application.
+                </p>
+            </div>
+        </div>
+    </section>
+<footer class="footer">
+    <div class="footer-content">
+        <p>Developed by <span class="dev-name">Falmi Abdi</span> &copy; 2025</p>
+        <p>Contact: <span class="contact">+251962395284</span> | Jimma University</p>
+        <a href="mailto:falmitesfaye@gmail.com" class="email">falmitesfaye@gmail.com</a>
+    </div>
+    <div class="moving-line"></div>
+</footer>
+
+    <script>
+        function openMenu() {
+            document.getElementById("dropdownMenu").style.right = "0";
+        }
+        
+        function closeMenu() {
+            document.getElementById("dropdownMenu").style.right = "-100%";
+        }
+    </script>
+</body>
+</html>

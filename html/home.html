@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>My Home Portfolio</title>
+    <link
+  rel="stylesheet"
+  href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.6.0/css/all.min.css"
+  
+/>
+<link rel="stylesheet" href="../css/home.css">
+  </head>
+  <body>
+  <nav>
+        <div class="logo">Falmi <span>Abdi</span></div>
+        <div class="links">
+            <a href="home.html">Home</a>
+            <a href="AboutMe.html">About</a>
+             <a href="skill.html">Skill</a>
+            <a href="service.html">Services</a>
+            <a href="my projects.html">Projects</a>
+            <a href="contact.html">Contact</a>
+             
+        </div>
+       <i class="fa-solid fa-bars hamburg" onclick="openMenu()"></i>
+    </nav>
+    <div class="dropdown-menu" id="dropdownMenu">
+       <a href="home.html">Home</a>
+            <a href="AboutMe.html">About</a>
+             <a href="skill.html">Skill</a>
+            <a href="service.html">Services</a>
+            <a href="my projects.html">Projects</a>
+            <a href="contact.html">Contact</a>
+        <i class="fa-solid fa-times cancel" onclick="closeMenu()"></i>
+    </div>
+    <section>
+      <div class="main-content">
+        <div class="image">
+          <img src="../images/IMG_2842.png" alt=""/>
+        </div>
+        <div class="content">
+          <h1 id="typewriter">I'm Falmi Tesfaye</h1>
+          <h3>Full-Stack Developer</h3>
+          <p>Welcome to my homepage</p>
+        </div>
+      </div>
+    </section>
+ <footer class="footer">
+    <div class="footer-content">
+        <p>Developed by <span class="dev-name">Falmi Abdi</span> &copy; 2025</p>
+        <p>Contact: <span class="contact">+251962395284</span> | Jimma University</p>
+        <a href="mailto:falmitesfaye@gmail.com" class="email">falmitesfaye@gmail.com</a>
+    </div>
+    <div class="moving-line"></div>
+</footer>
+
+    </section>
+    <!-- Correct Font Awesome Kit Link -->
+    <script src="https://kit.fontawesome.com/YOUR-KIT-ID.js" crossorigin="anonymous"></script>
+    <script>
+      function openMenu(){
+        document.getElementById("dropdownMenu").style.right ="0";
+      }
+      function closeMenu() {
+        document.getElementById("dropdownMenu").style.right = "-100%";
+      }
+    </script>
+    
+  </body>
+
+
+</html>

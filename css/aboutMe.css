@@ -1,0 +1,447 @@
+
+        /* General Styling */
+        * {
+            padding: 0;
+            margin: 0;
+            font-family: "Poppins", sans-serif;
+            box-sizing: border-box;
+            scroll-behavior: smooth;
+        }
+
+        body {
+            width: 100%;
+            height: 100vh;
+             background-image: url('../images/198330974-glowing-neon-line-software-web-developer-programming-code-icon-isolated-on-black-background.jpg');
+        background-repeat: no-repeat;
+        background-size: cover;
+            color: white;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+        }
+
+        /* Navbar */
+        nav {
+            width: 100%;
+            height: 10vh;
+            position: fixed;
+            top: 0;
+            left: 0;
+           background-image: url('../images/198330974-glowing-neon-line-software-web-developer-programming-code-icon-isolated-on-black-background.jpg');
+        background-repeat: no-repeat;
+        background-size: cover;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 10px 50px;
+            z-index: 1000;
+            transition: 0.5s ease-in-out;
+        }
+
+        .logo {
+            font-size: 24px;
+            font-weight: bold;
+            color: rgb(252, 249, 249);
+            transition: 0.3s ease;
+        }
+
+        .logo span {
+            color: #ffcc00;
+        }
+
+        .links {
+            display: flex;
+        }
+
+        .links a {
+            color: rgb(230, 222, 222);
+            text-decoration: none;
+            margin: 0 15px;
+            font-size: 18px;
+            transition: 0.3s ease-in-out;
+            position: relative;
+        }
+
+        .links a:hover {
+            color: #ffcc00;
+            transform: scale(1.1);
+        }
+
+        .links a::after {
+            content: "";
+            display: block;
+            width: 0;
+            height: 2px;
+            background: #ffcc00;
+            transition: width 0.3s;
+            position: absolute;
+            left: 0;
+            bottom: -5px;
+        }
+
+        .links a:hover::after {
+            width: 100%;
+        }
+        /* Hamburger Menu */
+      .hamburg {
+        font-size: 24px;
+        color: rgb(229, 217, 217);
+        display: none;
+        cursor: pointer;
+        z-index: 1100;
+      }
+
+        /* Dropdown Menu */
+        .dropdown-menu {
+            display: none; /* Initially hidden */
+            flex-direction: column;
+            position: fixed;
+            top: 0;
+            right: -100%;
+            width: 250px;
+            height: 100vh;
+           background-image: url('../images/198330974-glowing-neon-line-software-web-developer-programming-code-icon-isolated-on-black-background.jpg');
+        background-repeat: no-repeat;
+        background-size: cover;
+            justify-content: center;
+            align-items: center;
+            transition: right 0.5s ease-in-out;
+            z-index: 999;
+        }
+
+        .dropdown-menu a {
+            color: rgb(234, 232, 232);
+            text-decoration: none;
+            margin: 15px 0;
+            font-size: 20px;
+            transition: 0.3s;
+        }
+
+        .dropdown-menu a:hover {
+            color: #ffcc00;
+            transform: scale(1.1);
+        }
+
+       .dropdown-menu .cancel {
+        background-color: white;
+        position: absolute;
+        top: 2px;
+        right: 229px;
+        font-size: 24px;
+        color: #000000;
+        cursor: pointer;
+    }
+
+        /* Main Content */
+        .main-content {
+            margin-top: 10vh;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            animation: fadeIn 1.5s ease-in-out;
+        }
+
+        .about-container {
+            display: flex;
+            flex-wrap: wrap;
+            align-items: center;
+            margin-top: 0;
+            justify-content: center;
+            max-width: 900px;
+        background-image: url('../images/198330974-glowing-neon-line-software-web-developer-programming-code-icon-isolated-on-black-background.jpg');
+        background-repeat: no-repeat;
+        background-size: cover;
+            padding: 40px;
+            border-radius: 15px;
+            box-shadow: 0 0 15px rgba(0, 255, 255, 0.2);
+        }
+
+        /* Image Section */
+        .about-img {
+            position: relative;
+            flex: 1;
+            max-width: 300px;
+            min-width: 250px;
+            margin-right: 20px;
+        }
+
+        .about-img img {
+            width: 100%;
+            border-radius: 15px;
+            box-shadow: 0 0 20px rgba(0, 255, 255, 0.6);
+        }
+
+        /* Floating Stats */
+        .stats {
+            position: absolute;
+            color: white;
+            font-size: 14px;
+            background: rgba(0, 255, 255, 0.8);
+            padding: 10px 15px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 255, 255, 0.5);
+            animation: float 3s ease-in-out infinite;
+        }
+
+        .stats:nth-child(1) { top: 10px; left: -20px; }
+        .stats:nth-child(2) { bottom: 50px; left: -30px; }
+        .stats:nth-child(3) { top: 150px; right: -20px; }
+
+        /* Text Section */
+        .about-text {
+            flex: 2;
+            min-width: 300px;
+            text-align: left;
+        }
+
+        .about-text h2 {
+            color: cyan;
+            font-size: 28px;
+        }
+
+        .about-text p {
+            font-size: 16px;
+            line-height: 1.6;
+        }
+
+        /* Button */
+        .about-text .btn {
+            display: inline-block;
+            margin-top: 20px;
+            padding: 12px 20px;
+            background: cyan;
+            color: #222;
+            font-weight: bold;
+            border-radius: 5px;
+            text-decoration: none;
+            cursor: pointer;
+        }
+
+        .about-text .btn:hover {
+            background: #00ffff;
+            transform: scale(1.05);
+        }
+
+        /* Animations */
+        @keyframes fadeIn {
+            0% { opacity: 0; transform: translateY(-20px); }
+            100% { opacity: 1; transform: translateY(0); }
+        }
+
+        @keyframes float {
+            0% { transform: translateY(0); }
+            50% { transform: translateY(-10px); }
+            100% { transform: translateY(0); }
+        }
+
+        /* Off-Canvas Panel */
+        .offcanvas {
+            position: fixed;
+            top: 0;
+            right: -400px;
+            width: 400px;
+            height: 100%;
+        background-color: rgb(36, 38, 92);
+            color: white;
+            padding: 20px;
+            box-shadow: -5px 0 10px rgba(0, 255, 255, 0.5);
+            transition: right 0.4s ease-in-out;
+            overflow-y: auto;
+            z-index: 1002;
+        }
+
+        .offcanvas.show {
+            right: 0;
+        }
+
+        .offcanvas h2 {
+            color: cyan;
+            text-align: center;
+        }
+
+        .offcanvas p {
+            font-size: 14px;
+            line-height: 1.6;
+        }
+
+        .close-btn {
+            position: absolute;
+            top: 10px;
+            right: 15px;
+            font-size: 20px;
+            cursor: pointer;
+            color: cyan;
+        }
+
+        .close-btn:hover {
+            color: white;
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .about-container {
+                flex-direction: column;
+                text-align: center;
+            }
+            .about-img {
+                margin: 0 0 20px 0;
+            }
+            .offcanvas {
+                padding: 20px;
+                width: 85%;
+            }
+            .dropdown-menu {
+                display: flex; 
+                     z-index: 1002;
+            }
+            .links {
+                display: none;
+            }
+            .hamburg {
+                display: block; 
+            }
+            .dropdown-menu{
+        z-index: 1002;
+       }
+       .dropdown-menu a {
+        color: rgb(234, 232, 232);
+        text-decoration: none;
+        margin: 15px 0;
+        font-size: 20px;
+        transition: 0.3s;
+      }
+      .dropdown-menu a:hover {
+        color: #ffcc00;
+      }
+      .dropdown-menu .cancel {
+        position: absolute;
+        top: 0px;
+        right: 230px;
+        font-size: 24px;
+        background: #f7f6f6;
+        color: rgb(13, 0, 0);
+        cursor: pointer;
+      }
+            .about-container {
+            display: flex;
+            flex-wrap: wrap;
+            margin-top: 50vh;
+            align-items: center;
+            justify-content: center;
+            max-width: 900px;
+        background-image: url('../images/198330974-glowing-neon-line-software-web-developer-programming-code-icon-isolated-on-black-background.jpg');
+        background-repeat: no-repeat;
+        background-size: cover;
+            padding: 40px;
+            border-radius: 15px;
+            box-shadow: 0 0 15px rgba(0, 255, 255, 0.2);
+        }
+          .main-content {
+            justify-content: center;
+            align-items: center;
+            margin-left: 23px;
+          }
+        }.footer {
+    position: relative;
+    background-image: url('../images/198330974-glowing-neon-line-software-web-developer-programming-code-icon-isolated-on-black-background.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    color: white;
+    text-align: center;
+    padding: 10px;
+    font-size: x-small;
+    font-family: Arial, sans-serif;
+    overflow: hidden;
+}
+
+@keyframes moveBendLine {
+    0% {
+        left: -100%;
+        top: 10px;
+    }
+    50% {
+        left: 50%;
+        top: 0px; /* Raise in the middle to create a bending effect */
+    }
+    100% {
+        left: 100%;
+        top: 10px;
+    }
+}
+
+.moving-line {
+    position: absolute;
+    left: -100%;
+    width: 100%;
+    height: 8px;
+    background: linear-gradient(90deg, transparent, #00aaff, #00aaff, transparent);
+    border-radius: 5px;
+    filter: drop-shadow(0 0 10px #00aaff);
+    animation: moveBendLine 3s ease-in-out infinite;
+}
+
+.dev-name {
+    font-weight: bold;
+    color: #ffcc00;
+}
+
+.contact {
+    font-style: italic;
+}
+
+/* Email Styling */
+.email {
+    display: block;
+    font-size: small;
+    color: #ffcc00;
+    margin-top: 5px;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.email:hover {
+    color: #ffd700;
+    text-decoration: underline;
+}
+
+        @media (min-width: 768px) {
+            .dropdown-menu {
+                display: none; /* Hide dropdown menu on larger screens */
+            }
+      
+            .hamburg {
+                display: none; /* Hide hamburger icon on larger screens */
+            }
+            .main-content {
+            margin-top: 10vh;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            animation: fadeIn 1.5s ease-in-out;
+        }
+        .about-container{
+          margin-top: 5vh;
+        }
+        
+        }
+         @media (min-width: 576px) {
+        .offcanvas {
+            position: fixed;
+            top: 0;
+            right: -668px;
+            width: 400px;
+            height: 100%;
+        background-color: rgb(36, 38, 92);
+            color: white;
+            padding: 20px;
+            box-shadow: -5px 0 10px rgba(0, 255, 255, 0.5);
+            transition: right 0.4s ease-in-out;
+            overflow-y: auto;
+            z-index: 1002;
+        }}
